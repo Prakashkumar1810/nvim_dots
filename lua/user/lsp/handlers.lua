@@ -99,4 +99,20 @@ end
 
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
+-- Setting Error and warning Highlights
+vim.cmd "hi LspDiagnosticsVirtualTextError guifg=red gui=bold,italic,underline"
+vim.cmd "hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold,italic,underline"
+vim.cmd "hi LspDiagnosticsVirtualTextInformation guifg=yellow gui=bold,italic,underline"
+vim.cmd "hi LspDiagnosticsVirtualTextHint guifg=green gui=bold,italic,underline"
+
+vim.cmd "hi DiagnosticUnderlineError guifg=red gui=bold,italic,underline"
+vim.cmd "hi DiagnosticUnderlineWarn guifg=orange gui=bold,italic,underline"
+vim.cmd "hi DiagnosticUnderlineInfo guifg=yellow gui=bold,italic,underline"
+vim.cmd "hi DiagnosticUnderlineHint guifg=green gui=bold,italic,underline"
+
+-- vim.cmd "hi DiagnosticUnderlineError cterm=undercurl gui=undercurl guisp=#db4b4b"
+-- vim.cmd "hi DiagnosticUnderlineWarn cterm=undercurl gui=undercurl guisp=#e0af68"
+-- vim.cmd "hi DiagnosticUnderlineInfo cterm=undercurl gui=undercurl guisp=#0db9d7"
+-- vim.cmd "hi DiagnosticUnderlineHint cterm=undercurl gui=undercurl guisp=#1abc9c"
+
 return M
