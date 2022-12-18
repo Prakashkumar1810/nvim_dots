@@ -6,3 +6,9 @@ end
 require "user.lsp.mason"
 require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
+require("lsp-inlayhints").setup({
+  inlay_hints = {
+    only_current_line = true,
+    labels_separator = " | ",
+  }
+})
